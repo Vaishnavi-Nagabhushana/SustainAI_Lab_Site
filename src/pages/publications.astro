@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import siteConfig from '../site-config'
+
+// Import the JSON data as a module
+import publicationsData from '../data/Ayon_borthakur.json'
+
+console.log(publicationsData) // Optional: log to inspect the data structure
+---
+
+<BaseLayout title="Publications & Patents • XYZ Lab" description="Publications and Patents by Dr. Ayon Borthakur">
+  <article class="prose">
+    <section class="mt-8">
+      <h2 class="text-2xl font-semibold">Publications</h2>
+      <div class="space-y-8 mt-4">
+        {
+          // Grouping the publications by year
+          [...new Set(publicationsData.map((pub) => pub.year))] // Get unique years
+            .sort((a, b) => b - a) // Sorting years in descending order
+            .map((year) => (
+              <div key={year}>
+                <h3 class="text-xl font-semibold">{year}</h3>
+                <ul class="list-disc list-inside space-y-4 mt-4">
+                  {
+                    // Filtering publications for the current year
+                    publicationsData
+                      .filter((pub) => pub.year === year)
+                      .map((publication) => (
+                        <li key={publication.title}>
+                          <p>
+                            <b>{publication.title}</b>
+                            <span class="italic">{publication.authors.join(', ')}</span>
+                            {publication.source}
+                            <br />
+                          </p>
+                        </li>
+                      ))
+                  }
+                </ul>
+              </div>
+            ))
+        }
+      </div>
+    </section>
+
+    <!-- Patents Section -->
+    <section class="mt-8">
+      <h2 class="text-2xl font-semibold">Patents</h2>
+      <div class="space-y-8 mt-4">
+        {
+          // Grouping the patents by year
+          [...new Set(publicationsData.filter((pub) => pub.type === 'Patent').map((pub) => pub.year))] // Get unique years for patents
+            .sort((a, b) => b - a) // Sorting years in descending order
+            .map((year) => (
+              <div key={year}>
+                <h3 class="text-xl font-semibold">{year}</h3>
+                <ul class="list-disc list-inside space-y-4 mt-4">
+                  {
+                    // Filtering patents for the current year
+                    publicationsData
+                      .filter((pub) => pub.year === year && pub.type === 'Patent')
+                      .map((patent) => (
+                        <li key={patent.title}>
+                          <p>
+                            <b>{patent.title}</b>
+                            <span class="italic">{patent.authors.join(', ')}</span>
+                            {patent.source}
+                            <br />
+                          </p>
+                        </li>
+                      ))
+                  }
+                </ul>
+              </div>
+            ))
+        }
+      </div>
+    </section>
+  </article>
+</BaseLayout>

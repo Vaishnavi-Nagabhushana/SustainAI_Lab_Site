@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import siteConfig from '../site-config'
+---
+
+<BaseLayout title="About • XYZ Lab" description="About Dr. Ayon Borthakur">
+  <article class="prose">
+    <!-- ─────────────  Profile header  ───────────── -->
+    <div class="flex flex-col md:flex-row gap-6 items-center">
+      <!-- Photo -->
+      <img
+        src="/AyonBorthakur.jpg"
+        *
+        <--
+        put
+        your
+        photo
+        here
+        *
+        alt="Dr. Ayon Borthakur"
+        class="w-40 h-50 object-cover rounded-md"
+      />
+
+      ```
+      <!-- Name & title -->
+      <!-- Name & title -->
+      <div>
+        <h1 class="m-0"></h1>
+        <p class="mt-4 text-justify">
+          I am, <b class="text-lg">Dr. Ayon Borthakur</b> an Assistant Professor at the <b class="text-lg"
+            >Mehta Family School of Data Science and Artificial Intelligence</b
+          >, IIT Guwahati. My research lies at the intersection of neuroscience and artificial intelligence, with a
+          focus on biologically inspired learning algorithms, neuromorphic hardware, and continual learning systems.
+        </p>
+
+        <!-- Quick-links (icons optional) -->
+        <div class="flex gap-3 mt-2 text-xl">
+          <a aria-label="Email" href="mailto:{{ siteConfig.email }}"><i class="i-ri-mail-line"></i></a>
+          <a
+            aria-label="Google Scholar"
+            href="https://scholar.google.com/citations?user=7FTo_P0AAAAJ&hl=en&oi=ao"
+            target="_blank"><i class="i-ri-graduation-cap-line"></i></a
+          >
+          <a
+            aria-label="ResearchGate"
+            href="https://www.researchgate.net/..."
+            target="_blank"
+            class="text-xl font-semibold"
+          >
+            R<sup>G</sup>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ─────────────  Career timeline  ───────────── -->
+    <section class="mt-6">
+      <ul class="list-disc list-inside space-y-2">
+        <li><span class="font-bold text-lg">2023 – present:</span> Assistant Professor, IIT Guwahati</li>
+        <li><span class="font-bold text-lg">2022 – 2023:</span> Assistant Professor, IIT Hyderabad, India</li>
+        <li>
+          <span class="font-bold text-lg">2021 – 2022:</span> Senior Neuromorphic Engineer, Innatera Nanosystems, NL
+        </li>
+        <li>
+          <span class="font-bold text-lg">2021:</span> Ph.D., Artificial Intelligence (Computational Biology), Cornell University,
+          USA <br />
+          <strong>Thesis committee</strong> — <em>T. Cleland (Chair), T. Joachims, D. Field, A. Molnar, D. Smith</em>
+        </li>
+
+        <li>
+          <span class="font-bold text-lg">2013 – 2014:</span> Research Assistant, Centre for Neuroscience, IISc Bengaluru
+          (with Supratim Ray)
+        </li>
+        <li><span class="font-bold text-lg">2013:</span> B.Tech, Electrical Engineering, IIT Dhanbad</li>
+      </ul>
+    </section>
+
+    <!-- ─────────────  Grants  ───────────── -->
+    <section class="mt-8">
+      <h2>Grants</h2>
+      <ul class="list-disc list-inside">
+        <li>Intel Neuromorphic Community faculty grant (2018)</li>
+        <li>Cornell University conference travel grants (2014, 2016, 2017, 2019)</li>
+        <li>Cornell University Sage Fellowship (2014)</li>
+      </ul>
+    </section>
+
+    <!-- ─────────────  Workshops  ───────────── -->
+    <section class="mt-8">
+      <h2>Workshops</h2>
+      <ul class="list-disc list-inside">
+        <li>Keynote speaker — 1st Int’l Workshop on Sustainable AI for Edge (SAI4E), AIMLSys Bengaluru (2023)</li>
+        <li>Telluride neuromorphic cognition engineering workshop, USA (2019)</li>
+        <li>Intel Neuromorphic Community Research Workshop, Reykjavik (2018)</li>
+        <li>U-wide GET SET Teaching Conference, Cornell (2015)</li>
+        <li>Berkeley summer course on mining & modeling neural data, USA (2015)</li>
+        <li>Bangalore cognition workshop, IISc Bengaluru (2013)</li>
+      </ul>
+    </section>
+    ```
+  </article>
+</BaseLayout>

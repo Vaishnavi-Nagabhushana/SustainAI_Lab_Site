@@ -1,0 +1,39 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import siteConfig from '@/site-config'
+---
+
+<BaseLayout description={siteConfig.description}>
+  <article class="prose">
+    <h1 class="text-center">Welkom to SustainAI Lab!</h1>
+    <p style="text-align:justify;">
+      Welcome to the SustainAI Lab, led by <strong>Dr. Ayon Borthakur</strong>, Assistant Professor at the Mehta Family School
+      of Data Science & Artificial Intelligence, IIT Guwahati. Our lab is dedicated to building real-time,
+      energy-efficient AI systems inspired by the cognitive science of smell, touch, and vision. Through
+      interdisciplinary research in deep learning, neuromorphic computing, and continual learning, we aim to bridge the
+      gap between biological and artificial intelligence.
+    </p>
+  </article>
+
+  <section class="prose mt-10">
+    <h2>Research Areas</h2>
+    <ul class="list-disc list-inside">
+      <li>Embedded AI systems / Edge AI / TinyML</li>
+      <li>Deep learning</li>
+      <li>Neuromorphic computing</li>
+      <li>Computational cognitive neuroscience</li>
+    </ul>
+  </section>
+
+  <section class="prose mt-10">
+    <h2>News</h2>
+    <ul class="list-disc list-inside">
+      <li><strong>Oct 2024</strong> — Neural Decision Tree for Bio-TinyML : Kartikay et al. published at BioCAS</li>
+      <li><strong>Aug 2024</strong> — Vaishnavi Nagabhushana joins as a PhD student</li>
+      <li><strong>March 2024</strong> — Four lab students admitted for graduate studies in the US</li>
+      <li><strong>Feb 2024</strong> — Area Chair at ICLR Tiny Papers 2024</li>
+      <li><strong>Jan 2024</strong> — Kartikay Agrawal joins as PhD student</li>
+      <li><a href="/news">... see all news</a></li>
+    </ul>
+  </section>
+</BaseLayout>

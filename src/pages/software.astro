@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import siteConfig from '../site-config'
+---
+
+<BaseLayout title="Sapicore: A PyTorch-based Framework for Neuromorphic Modeling">
+  <section class="software-intro">
+    <h3 class="page-title">Sapicore: A PyTorch-based Framework for Neuromorphic Modeling</h3>
+    <p><strong>Author:</strong> Matthew Einhorn, Ayon Borthakur, Thomas Cleland</p>
+    <p>
+      Sapicore was developed as a project of the Computational Physiology Laboratory at Cornell University. It is a
+      framework that provides high-level abstractions to help write neuromorphic models using PyTorch. Sapicore itself
+      does not contain any concrete models; instead, each model may have its own repository that implements the Sapicore
+      components used by the model.
+    </p>
+  </section>
+  <style scoped>
+    .page-title {
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+  </style>
+</BaseLayout>

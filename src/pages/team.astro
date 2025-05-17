@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout title="Our Team">
+  <section class="mt-12">
+    <h2 class="text-3xl font-bold mb-8">Research Scholars</h2>
+
+    <div class="flex flex-col md:flex-row items-start gap-6">
+      <!-- Image and Caption Column -->
+      <div class="flex flex-col items-center text-center text-gray-300 text-sm">
+        <img src="/Vaishnavi.jpg" alt="Vaishnavi N" class="w-150 h-auto object-cover rounded-md" />
+
+        <p class="font-semibold text-white">Vaishnavi N</p>
+        <p class="text-xs text-gray-400">2024 Aug – present</p>
+      </div>
+
+      <!-- Text Bio Column -->
+      <div class="text-gray-300 text-sm max-w-3xl">
+        <p class="mb-4">
+          Hey there! I’m <span class="font-semibold text-white">Vaishnavi N</span>, a research scholar at the
+          <span class="font-semibold text-white">
+            Mehta Family School of Data Science and Artificial Intelligence</span
+          >, IIT Guwahati. I explore the fascinating intersection of brains and machines — building systems that not
+          only think but adapt. My work focuses on <span class="italic">neuro-inspired AI</span>, <span class="italic"
+            >computer vision</span
+          >, <span class="italic">TinyML</span>, and <span class="italic">continual learning</span> — shaping AI that evolves
+          like we do.
+        </p>
+
+        <p class="mb-4">
+          When I'm not training machines to be a little more human, you’ll find me painting walls into stories or
+          swimming my way through ideas.
+        </p>
+
+        <p>
+          <span class="font-medium text-white">Email:</span>
+          <a href="mailto:n.vaishnavi@iitg.ac.in" class="text-blue-400 hover:underline">n.vaishnavi@iitg.ac.in</a>
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
