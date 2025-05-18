@@ -2,9 +2,10 @@ export const siteConfig = {
   author: 'Dr. Ayon Borthakur',
   title: 'SustainAI Lab',
   subtitle: 'SustainAI Lab at IIT Guwahati',
-  description: 'We are a research lab at IIT Guwahati led by Dr. Ayon Borthakur, focusing on ...', // (add your focus here)
+  description: 'We are a research lab at IIT Guwahati led by Dr. Ayon Borthakur, focusing on sustainable AI, data-driven decision-making, and interdisciplinary research at the intersection of technology and society.',
+
   image: {
-    src: '/lab_logo_tentative.png', // You can replace this image in `public/`
+    src: '/lab_logo_tentative.png',
     alt: 'tentative lab logo',
   },
   email: 'ayon.borthakur@iitg.ac.in',

@@ -25,10 +25,12 @@ const resolvedImage = image?.src
 const canonicalURL = new URL(Astro.request.url, Astro.site)
 
 function formatCanonicalURL(url: string | URL) {
-  const path = url.toString()
+  let path = url.toString()
   const hasQueryParams = path.includes('?')
-  if (hasQueryParams) path.replace(/\/?$/, '')
-  return path.replace(/\/?$/, hasQueryParams ? '' : '/')
+  if (!hasQueryParams) {
+    path = path.replace(/\/?$/, '/')
+  }
+  return path
 }
 ---
 
@@ -62,6 +64,26 @@ function formatCanonicalURL(url: string | URL) {
 <meta property="twitter:description" content={description} />
 {resolvedImage?.src && <meta property="twitter:image" content={resolvedImage.src} />}
 {resolvedImage?.alt && <meta name="twitter:image:alt" content={resolvedImage?.alt} />}
+
+
+<script type="application/ld+json">
+{JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": siteConfig.title,
+  "url": Astro.site,
+  "logo": resolvedImage?.src,
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": siteConfig.email,
+    "contactType": "Research Group",
+  },
+  "sameAs": siteConfig.socialLinks.filter(x => x.href).map(x => x.href),
+})}
+</script>
+
+
+
 
 <script>
   import nprogress from 'nprogress'
