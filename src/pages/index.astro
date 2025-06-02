@@ -1,39 +1,97 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import siteConfig from '@/site-config'
+import { newsItems, mediaCoverage } from '@/data/news'
+
+const latestNews = newsItems.slice(0, 5)
+const featuredMedia = mediaCoverage.slice(0, 3)
 ---
 
 <BaseLayout description={siteConfig.description}>
-  <article class="prose">
-    <h1 class="text-center">Welkom to SustainAI Lab!</h1>
-    <p style="text-align:justify;">
-      Welcome to the SustainAI Lab, led by <strong>Dr. Ayon Borthakur</strong>, Assistant Professor at the Mehta Family School
-      of Data Science & Artificial Intelligence, IIT Guwahati. Our lab is dedicated to building real-time,
-      energy-efficient AI systems inspired by the cognitive science of smell, touch, and vision. Through
-      interdisciplinary research in deep learning, neuromorphic computing, and continual learning, we aim to bridge the
-      gap between biological and artificial intelligence.
-    </p>
+  <article class="max-w-4xl mx-auto px-4 py-8 sm:py-12 space-y-10">
+    <section>
+      <img src="/lab_banner.png" alt="SustainAI Lab" class="mx-auto max-h-[350px] object-contain" />
+    </section>
+
+    <!-- Welcome Section -->
+    <section>
+      <h1 class="text-2xl font-semibold text-indigo-700 text-center mb-4">স্বাগতম, Welkom, Welcome!</h1>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+        The Sustainable AI(SustainAI) Lab is led by <strong class="text-indigo-700"
+          >Dr. Ayon Borthakur(ড° অয়ন বৰঠাকুৰ)</strong
+        >, Assistant Professor at the Mehta Family School of Data Science & Artificial Intelligence, IIT Guwahati. In
+        our SustainAI Lab, we are dedicated to building real time AI systems which are optimal for both human &
+        environment. As part of it, we conduct interdisciplinary research on deep learning, neuroscience, neuromorphic
+        computing & engineering as well as embedded AI systems.
+      </p>
+    </section>
+
+    <!-- Research Areas -->
+    <section
+      class="bg-white dark:bg-zinc-800/60 border border-gray-200 dark:border-zinc-600 shadow-md dark:shadow-md p-6 rounded-md transition-shadow duration-300 backdrop-blur-sm"
+    >
+      <h2 class="text-xl font-semibold text-indigo-700 mb-4">Research Areas</h2>
+      <ul class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+        <li>Embedded AI systems / Edge AI / TinyML</li>
+        <li>Deep learning</li>
+        <li>Neuromorphic computing & engineering</li>
+        <li>Human & Environment Friendly AI</li>
+        <li>Neuroscience</li>
+      </ul>
+    </section>
+
+    <!-- Featured Media Coverage -->
+    <section
+      class="bg-white dark:bg-zinc-800/60 border border-gray-200 dark:border-zinc-600 shadow-md dark:shadow-md p-6 rounded-md transition-shadow duration-300 backdrop-blur-sm"
+    >
+      <h2 class="text-xl font-semibold text-indigo-700 mb-4">Media Highlights</h2>
+      <ul class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+        {
+          featuredMedia.map(({ text, link }) => (
+            <li>
+              <a href={link} target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline">
+                {text}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="mt-4">
+        <a href="/news" class="text-indigo-600 hover:underline">... see all media</a>
+      </div>
+    </section>
+
+    <!-- Latest News -->
+    <section
+      class="bg-white dark:bg-zinc-800/60 border border-gray-200 dark:border-zinc-600 shadow-md dark:shadow-md p-6 rounded-md transition-shadow duration-300 backdrop-blur-sm"
+    >
+      <h2 class="text-xl font-semibold text-indigo-700 mb-4">Lab News</h2>
+      <ul class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+        {
+          latestNews.map(({ date, description }) => (
+            <li>
+              <p>
+                <span class="text-indigo-600 font-medium">{date}</span> — {description}
+              </p>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="mt-4">
+        <a href="/news" class="text-indigo-600 hover:underline">... see all news</a>
+      </div>
+    </section>
+
+    <!-- Openings -->
+    <section
+      class="bg-white dark:bg-zinc-800/60 border border-gray-200 dark:border-zinc-600 shadow-md dark:shadow-md p-6 rounded-md transition-shadow duration-300 backdrop-blur-sm"
+    >
+      <h2 class="text-xl font-semibold text-indigo-700 mb-4">Openings</h2>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-justify">
+        We are looking for multiple motivated collaborators to help design next generation AI. If you are open towards
+        working on Deep Learning, Edge AI for Vision/NLP/Tactile/Smell/Radar, Neuromorphic Computing or Human &
+        Environment Friendly AI, feel free to shoot an email to Ayon.
+      </p>
+    </section>
   </article>
-
-  <section class="prose mt-10">
-    <h2>Research Areas</h2>
-    <ul class="list-disc list-inside">
-      <li>Embedded AI systems / Edge AI / TinyML</li>
-      <li>Deep learning</li>
-      <li>Neuromorphic computing</li>
-      <li>Computational cognitive neuroscience</li>
-    </ul>
-  </section>
-
-  <section class="prose mt-10">
-    <h2>News</h2>
-    <ul class="list-disc list-inside">
-      <li><strong>Oct 2024</strong> — Neural Decision Tree for Bio-TinyML : Kartikay et al. published at BioCAS</li>
-      <li><strong>Aug 2024</strong> — Vaishnavi Nagabhushana joins as a PhD student</li>
-      <li><strong>March 2024</strong> — Four lab students admitted for graduate studies in the US</li>
-      <li><strong>Feb 2024</strong> — Area Chair at ICLR Tiny Papers 2024</li>
-      <li><strong>Jan 2024</strong> — Kartikay Agrawal joins as PhD student</li>
-      <li><a href="/news">... see all news</a></li>
-    </ul>
-  </section>
 </BaseLayout>

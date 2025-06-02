@@ -1,80 +1,113 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import siteConfig from '../site-config'
-
-// Import the JSON data as a module
 import publicationsData from '../data/Ayon_borthakur.json'
-
-console.log(publicationsData) // Optional: log to inspect the data structure
 ---
 
 <BaseLayout title="Publications & Patents • XYZ Lab" description="Publications and Patents by Dr. Ayon Borthakur">
-  <article class="prose">
-    <section class="mt-8">
-      <h2 class="text-2xl font-semibold">Publications</h2>
-      <div class="space-y-8 mt-4">
-        {
-          // Grouping the publications by year
-          [...new Set(publicationsData.map((pub) => pub.year))] // Get unique years
-            .sort((a, b) => b - a) // Sorting years in descending order
-            .map((year) => (
-              <div key={year}>
-                <h3 class="text-xl font-semibold">{year}</h3>
-                <ul class="list-disc list-inside space-y-4 mt-4">
-                  {
-                    // Filtering publications for the current year
-                    publicationsData
-                      .filter((pub) => pub.year === year)
-                      .map((publication) => (
-                        <li key={publication.title}>
-                          <p>
-                            <b>{publication.title}</b>
-                            <span class="italic">{publication.authors.join(', ')}</span>
-                            {publication.source}
-                            <br />
-                          </p>
-                        </li>
-                      ))
-                  }
-                </ul>
-              </div>
-            ))
-        }
-      </div>
+  <article class="max-w-4xl mx-auto px-4 py-8 sm:py-12">
+    {/* Patents Section */}
+    <section>
+      <h2 class="text-xl font-semibold text-indigo-700 dark:text-indigo-400 mb-6">Patents</h2>
+      {
+        [...new Set(publicationsData.filter((pub) => pub.type === 'Patent').map((pub) => pub.year))]
+          .sort((a, b) => b - a)
+          .map((year) => (
+            <div key={year} class="mb-8">
+              <h3 class="text-lg font-semibold text-indigo-600 dark:text-indigo-300 mb-4">{year}</h3>
+              <ul class="space-y-4">
+                {publicationsData
+                  .filter((pub) => pub.year === year && pub.type === 'Patent')
+                  .map((patent) => (
+                    <li
+                      key={patent.title}
+                      class="bg-white dark:bg-zinc-800/60 border border-gray-200 dark:border-zinc-600 p-4 rounded-md shadow-sm hover:shadow-md backdrop-blur-sm transition"
+                    >
+                      <p>
+                        <b class="text-gray-900 dark:text-gray-100">
+                          <a
+                            href={patent.citation_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-indigo-600 dark:text-indigo-400 hover:underline"
+                          >
+                            {patent.title}
+                          </a>
+                        </b>
+                        <br />
+                        <span class="italic text-gray-600 dark:text-gray-300">{patent.authors.join(', ')}</span>
+                        <br />
+                        <span class="text-gray-700 dark:text-gray-400">{patent.source}</span>
+                        <br />
+                        {patent.cites_url && (
+                          <a
+                            href={patent.cites_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm text-indigo-500 dark:text-indigo-300 hover:underline"
+                          >
+                            Citations
+                          </a>
+                        )}
+                      </p>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          ))
+      }
     </section>
 
-    <!-- Patents Section -->
-    <section class="mt-8">
-      <h2 class="text-2xl font-semibold">Patents</h2>
-      <div class="space-y-8 mt-4">
-        {
-          // Grouping the patents by year
-          [...new Set(publicationsData.filter((pub) => pub.type === 'Patent').map((pub) => pub.year))] // Get unique years for patents
-            .sort((a, b) => b - a) // Sorting years in descending order
-            .map((year) => (
-              <div key={year}>
-                <h3 class="text-xl font-semibold">{year}</h3>
-                <ul class="list-disc list-inside space-y-4 mt-4">
-                  {
-                    // Filtering patents for the current year
-                    publicationsData
-                      .filter((pub) => pub.year === year && pub.type === 'Patent')
-                      .map((patent) => (
-                        <li key={patent.title}>
-                          <p>
-                            <b>{patent.title}</b>
-                            <span class="italic">{patent.authors.join(', ')}</span>
-                            {patent.source}
-                            <br />
-                          </p>
-                        </li>
-                      ))
-                  }
-                </ul>
-              </div>
-            ))
-        }
-      </div>
+    {/* Publications Section */}
+    <section class="mb-12">
+      <h2 class="text-xl font-semibold text-indigo-700 dark:text-indigo-400 mb-6">Publications</h2>
+      {
+        [...new Set(publicationsData.map((pub) => pub.year))]
+          .sort((a, b) => b - a)
+          .map((year) => (
+            <div key={year} class="mb-8">
+              <h3 class="text-lg font-semibold text-indigo-600 dark:text-indigo-300 mb-4">{year}</h3>
+              <ul class="space-y-4">
+                {publicationsData
+                  .filter((pub) => pub.year === year && pub.type !== 'Patent')
+                  .map((publication) => (
+                    <li
+                      key={publication.title}
+                      class="bg-white dark:bg-zinc-800/60 border border-gray-200 dark:border-zinc-600 p-4 rounded-md shadow-sm hover:shadow-md backdrop-blur-sm transition"
+                    >
+                      <p>
+                        <b class="text-gray-900 dark:text-gray-100">
+                          <a
+                            href={publication.citation_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-indigo-600 dark:text-indigo-400 hover:underline"
+                          >
+                            {publication.title}
+                          </a>
+                        </b>
+                        <br />
+                        <span class="italic text-gray-600 dark:text-gray-300">{publication.authors.join(', ')}</span>
+                        <br />
+                        <span class="text-gray-700 dark:text-gray-400">{publication.source}</span>
+                        <br />
+                        {publication.cites_url && (
+                          <a
+                            href={publication.cites_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="text-sm text-indigo-500 dark:text-indigo-300 hover:underline"
+                          >
+                            Citations
+                          </a>
+                        )}
+                      </p>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          ))
+      }
     </section>
   </article>
 </BaseLayout>

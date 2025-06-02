@@ -2,7 +2,8 @@ export const siteConfig = {
   author: 'Dr. Ayon Borthakur',
   title: 'SustainAI Lab',
   subtitle: 'SustainAI Lab at IIT Guwahati',
-  description: 'We are a research lab at IIT Guwahati led by Dr. Ayon Borthakur, focusing on sustainable AI, data-driven decision-making, and interdisciplinary research at the intersection of technology and society.',
+  description:
+    'We are a research lab at IIT Guwahati led by Dr. Ayon Borthakur, focusing on sustainable AI, data-driven decision-making, and interdisciplinary research at the intersection of technology and society.',
 
   image: {
     src: '/lab_logo_tentative.png',
@@ -41,7 +42,7 @@ export const siteConfig = {
 
   header: {
     logo: {
-      src: '/lab_logo_tentative.png', // You can replace this image in `public/`
+      src: '/sustainAI.jpg', // You can replace this image in `public/`
       alt: 'tentative lab logo',
     },
     navLinks: [
@@ -53,7 +54,6 @@ export const siteConfig = {
       // { text: 'Openings', href: '/openings' },
       { text: 'Teaching', href: '/teaching' },
       { text: 'News', href: '/news' },
-
     ],
   },
 
@@ -74,8 +74,7 @@ export const siteConfig = {
     ],
   },
   footer: {
-    navLinks: [
-    ],
+    navLinks: [],
     contact: {
       address: '311, Academic Complex (HSS Building), Mehta Family School of DS & AI, IIT Guwahati',
       phone: '+91-361-258-3511',

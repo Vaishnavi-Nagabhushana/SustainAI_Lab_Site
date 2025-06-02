@@ -18,11 +18,9 @@ export default defineConfig({
     vue(),
   ],
   markdown: {
+    syntaxHighlight: 'shiki',
     shikiConfig: {
-      themes: {
-        light: 'github-light-default',
-        dark: 'github-dark-default',
-      },
+      theme: 'nord',
       wrap: true,
     },
   },

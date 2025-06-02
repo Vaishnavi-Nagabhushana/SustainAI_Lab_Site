@@ -1,25 +1,36 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-import siteConfig from '../site-config'
 ---
 
 <BaseLayout title="Sapicore: A PyTorch-based Framework for Neuromorphic Modeling">
-  <section class="software-intro">
-    <h3 class="page-title">Sapicore: A PyTorch-based Framework for Neuromorphic Modeling</h3>
-    <p><strong>Author:</strong> Matthew Einhorn, Ayon Borthakur, Thomas Cleland</p>
-    <p>
-      Sapicore was developed as a project of the Computational Physiology Laboratory at Cornell University. It is a
-      framework that provides high-level abstractions to help write neuromorphic models using PyTorch. Sapicore itself
-      does not contain any concrete models; instead, each model may have its own repository that implements the Sapicore
-      components used by the model.
-    </p>
-  </section>
-  <style scoped>
-    .page-title {
-      font-weight: bold;
-      font-size: 2rem;
-      line-height: 1.2;
-      margin-bottom: 1rem;
-    }
-  </style>
+  <article class="max-w-4xl mx-auto px-4 py-6">
+    <section class="mb-10">
+      <h1 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-400 mb-4">
+        Sapicore: A PyTorch-based Framework for Neuromorphic Modeling
+      </h1>
+
+      <div
+        class="bg-white dark:bg-zinc-800/60 border border-gray-200 dark:border-zinc-600 p-6 rounded-md shadow-md dark:shadow-md backdrop-blur-sm hover:shadow-lg transition-shadow duration-300"
+      >
+        <p class="text-gray-900 dark:text-gray-100 font-semibold mb-2">Author:</p>
+        <p class="text-gray-900 dark:text-gray-300 mb-4">Matthew Einhorn, Ayon Borthakur, Thomas Cleland</p>
+
+        <p class="text-gray-800 dark:text-gray-200 leading-relaxed mb-6">
+          Sapicore was developed as a project of the Computational Physiology Laboratory at Cornell University. It is a
+          framework that provides high-level abstractions to help write neuromorphic models using PyTorch. Sapicore
+          itself does not contain any concrete models; instead, each model may have its own repository that implements
+          the Sapicore components used by the model.
+        </p>
+
+        <a
+          href="https://cplab.github.io/sapicore/index.html"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-indigo-600 dark:text-indigo-400 hover:underline font-semibold transition-colors duration-300"
+        >
+          Official Sapicore Website
+        </a>
+      </div>
+    </section>
+  </article>
 </BaseLayout>

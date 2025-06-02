@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "type": "Journal article",
     "title": "Effect of reference scheme on power and phase of the local field potential",
@@ -14,11 +14,7 @@
     "cites": 74,
     "ecc": 74,
     "use": 1,
-    "authors": [
-      "V Shirhatti",
-      "A Borthakur",
-      "S Ray"
-    ]
+    "authors": ["V Shirhatti", "A Borthakur", "S Ray"]
   },
   {
     "type": "Journal article",
@@ -35,10 +31,7 @@
     "cites": 37,
     "ecc": 37,
     "use": 1,
-    "authors": [
-      "A Borthakur",
-      "TA Cleland"
-    ]
+    "authors": ["A Borthakur", "TA Cleland"]
   },
   {
     "type": "Journal article",
@@ -55,15 +48,12 @@
     "cites": 28,
     "ecc": 28,
     "use": 1,
-    "authors": [
-      "TA Cleland",
-      "A Borthakur"
-    ]
+    "authors": ["TA Cleland", "A Borthakur"]
   },
   {
     "type": "Conference paper",
     "title": "Signal conditioning for learning in the wild",
-    "source": "Proceedings of the 7th Annual Neuro-inspired Computational Elements Workshop …",
+    "source": "Proceedings of the 7th Annual Neuro-inspired Computational Elements Workshop",
     "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7FTo_P0AAAAJ&pagesize=100&citation_for_view=7FTo_P0AAAAJ:2osOgNQ5qMEC",
     "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=8318061484669368602",
     "rank": 4,
@@ -75,15 +65,12 @@
     "cites": 14,
     "ecc": 14,
     "use": 1,
-    "authors": [
-      "A Borthakur",
-      "TA Cleland"
-    ]
+    "authors": ["A Borthakur", "TA Cleland"]
   },
   {
     "type": "Conference paper",
     "title": "A neuromorphic transfer learning algorithm for orthogonalizing highly overlapping sensor array responses",
-    "source": "2017 ISOCS/IEEE International Symposium on Olfaction and Electronic Nose …",
+    "source": "2017 ISOCS/IEEE International Symposium on Olfaction and Electronic Nose",
     "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7FTo_P0AAAAJ&pagesize=100&citation_for_view=7FTo_P0AAAAJ:zYLM7Y9cAGgC",
     "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=13988348157442063660",
     "rank": 5,
@@ -95,10 +82,7 @@
     "cites": 11,
     "ecc": 11,
     "use": 1,
-    "authors": [
-      "A Borthakur",
-      "TA Cleland"
-    ]
+    "authors": ["A Borthakur", "TA Cleland"]
   },
   {
     "type": "Patent",
@@ -115,16 +99,12 @@
     "cites": 6,
     "ecc": 6,
     "use": 1,
-    "authors": [
-      "TA Cleland",
-      "N Imam",
-      "A Borthakur"
-    ]
+    "authors": ["TA Cleland", "N Imam", "A Borthakur"]
   },
   {
     "type": "Journal article",
     "title": "Heterogeneous quantization regularizes spiking neural network activity",
-    "source": "Scientific Reports",
+    "source": "Nature Scientific Reports",
     "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7FTo_P0AAAAJ&pagesize=100&citation_for_view=7FTo_P0AAAAJ:W7OEmFMy1HYC",
     "cites_url": "https://scholar.google.com/scholar?oi=bibs&hl=en&cites=5940273333512106071",
     "rank": 7,
@@ -136,13 +116,7 @@
     "cites": 1,
     "ecc": 1,
     "use": 1,
-    "authors": [
-      "R Moyal",
-      "KR Mama",
-      "M Einhorn",
-      "A Borthakur",
-      "TA Cleland"
-    ]
+    "authors": ["R Moyal", "KR Mama", "M Einhorn", "A Borthakur", "TA Cleland"]
   },
   {
     "type": "Conference paper",
@@ -159,14 +133,7 @@
     "cites": 1,
     "ecc": 1,
     "use": 1,
-    "authors": [
-      "K Agrawal",
-      "A Borthakur",
-      "AK Singh",
-      "P Srikaran",
-      "D Nandi",
-      "O Pujari"
-    ]
+    "authors": ["K Agrawal", "A Borthakur", "AK Singh", "P Srikaran", "D Nandi", "O Pujari"]
   },
   {
     "type": "Conference paper",
@@ -183,10 +150,7 @@
     "cites": 1,
     "ecc": 1,
     "use": 1,
-    "authors": [
-      "RV Ambati",
-      "A Borthakur"
-    ]
+    "authors": ["RV Ambati", "A Borthakur"]
   },
   {
     "type": "Patent",
@@ -203,10 +167,7 @@
     "cites": 0,
     "ecc": 0,
     "use": 1,
-    "authors": [
-      "S Paul",
-      "A Borthakur"
-    ]
+    "authors": ["S Paul", "A Borthakur"]
   },
   {
     "type": "Preprint",
@@ -223,11 +184,7 @@
     "cites": 0,
     "ecc": 0,
     "use": 1,
-    "authors": [
-      "A Somasundaram",
-      "P Mishra",
-      "A Borthakur"
-    ]
+    "authors": ["A Somasundaram", "P Mishra", "A Borthakur"]
   },
   {
     "type": "Patent",
@@ -244,12 +201,7 @@
     "cites": 0,
     "ecc": 0,
     "use": 1,
-    "authors": [
-      "KW Kozdon",
-      "D Maksimiuk",
-      "A Borthakur",
-      "PA Bogdan"
-    ]
+    "authors": ["KW Kozdon", "D Maksimiuk", "A Borthakur", "PA Bogdan"]
   },
   {
     "type": "Preprint",
@@ -266,9 +218,7 @@
     "cites": 0,
     "ecc": 0,
     "use": 1,
-    "authors": [
-      "A Borthakur"
-    ]
+    "authors": ["A Borthakur"]
   },
   {
     "title": "Mechanisms and Architectural Priors for Learning in the Wild",
@@ -284,27 +234,6 @@
     "cites": 0,
     "ecc": 0,
     "use": 1,
-    "authors": [
-      "A Borthakur"
-    ]
-  },
-  {
-    "title": "Preventing Catastrophic Forgetting in an Online Learning Setting",
-    "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=7FTo_P0AAAAJ&pagesize=100&citation_for_view=7FTo_P0AAAAJ:u-x6o8ySG0sC",
-    "cites_url": "https://scholar.google.com",
-    "rank": 15,
-    "year": 0,
-    "volume": 0,
-    "issue": 0,
-    "startpage": 0,
-    "endpage": 0,
-    "cites": 0,
-    "ecc": 0,
-    "use": 1,
-    "authors": [
-      "A Borthakur",
-      "M Einhorn",
-      "N Dhawan"
-    ]
+    "authors": ["A Borthakur"]
   }
 ]
