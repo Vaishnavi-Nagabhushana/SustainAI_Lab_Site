@@ -8,4 +8,11 @@ export default antfu({
     astro: true,
     css: true,
   },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: './tsconfig.json', // Ensure ESLint uses your tsconfig.json
+      },
+    },
+  },
 })
