@@ -2,6 +2,10 @@
 
 export const newsItems = [
   {
+    date: 'June 2025',
+    description: 'SPELA: Our work with a paper titled "Learning using a single forward pass" published at TMLR. Congrats Aditya and Pushkal.',
+  },
+  {
     date: 'May 2025',
     description: 'Prakhar Shankar successfully defends his MTP. He is joining Indus Insights.',
   },
