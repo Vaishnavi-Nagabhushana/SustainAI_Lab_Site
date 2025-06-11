@@ -103,6 +103,23 @@
   },
   {
     "type": "Journal article",
+    "title": "Learning Using a Single Forward Pass",
+    "source": "TMLR",
+    "citation_url": "https://openreview.net/pdf?id=EDQ8QOGqjr",
+    "cites_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6msVyocAAAAJ&sortby=pubdate&citation_for_view=6msVyocAAAAJ:_FxGoFyzp5QC",
+    "rank": 8,
+    "year": 2025,
+    "volume": 0,
+    "issue": 0,
+    "startpage": 0,
+    "endpage": 0,
+    "cites": 1,
+    "ecc": 1,
+    "use": 1,
+    "authors": ["A Somasundaram", "P Mishra", "A Borthakur"]
+  },
+  {
+    "type": "Journal article",
     "title": "Heterogeneous quantization regularizes spiking neural network activity",
     "source": "Nature Scientific Reports",
     "citation_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=6msVyocAAAAJ&citation_for_view=6msVyocAAAAJ:u-x6o8ySG0sC",
