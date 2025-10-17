@@ -48,9 +48,9 @@ export const siteConfig = {
     navLinks: [
       { text: 'Home', href: '/' },
       { text: 'About', href: '/about' },
-      { text: 'Patents & Publications', href: '/publications' },
+      { text: 'Publications', href: '/publications' },
       { text: 'Team', href: '/team' },
-      { text: 'Software', href: '/software' },
+      { text: 'Software & Patents', href: '/software' },
       // { text: 'Openings', href: '/openings' },
       { text: 'Teaching', href: '/teaching' },
       { text: 'News', href: '/news' },
