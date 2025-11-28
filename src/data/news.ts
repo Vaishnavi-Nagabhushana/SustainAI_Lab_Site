@@ -2,6 +2,14 @@
 
 export const newsItems = [
   {
+    date: 'Dec 2025',
+    description: 'Our paper titled "A Second-Order SpikingSSM for Wearables" Spotlight presentation at TS4H Workshop, NeurIPS 2025.',
+  },
+  {
+    date: 'Oct 2025',
+    description: 'Gourish Majumdar and Kalyani Prashant Kolte join as PhD students.',
+  },
+  {
     date: 'June 2025',
     description: 'SPELA: Our paper titled "Learning using a single forward pass" published at TMLR. Congrats Aditya and Pushkal.',
   },

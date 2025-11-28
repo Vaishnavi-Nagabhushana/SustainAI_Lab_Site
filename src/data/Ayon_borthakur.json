@@ -252,5 +252,13 @@
     "ecc": 0,
     "use": 1,
     "authors": ["A Borthakur"]
+  },
+  {
+    "title": "A Second-Order Spiking(SSM) for Wearables",
+    "authors": ["Kartikay Agrawal", "Abhijeet Vikram", "Vedant Sharma", "Vaishnavi Nagabhushana", "Ayon Borthakur"],
+    "source": "NeurIPS 2025 Workshop on Learning from Time Series for Health",
+    "rank": 15,
+    "year": 2025,
+    "citation_url": "https://openreview.net/forum?id=hv52KEOshb"
   }
 ]
