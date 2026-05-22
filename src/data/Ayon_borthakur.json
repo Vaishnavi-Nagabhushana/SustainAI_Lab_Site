@@ -260,5 +260,21 @@
     "rank": 15,
     "year": 2025,
     "citation_url": "https://openreview.net/forum?id=hv52KEOshb"
+  },
+  {
+    "title": "CATFormer: When Continual Learning Meets Spiking Transformers With Dynamic Thresholds",
+    "authors": ["Vaishnavi Nagabhushana", "Kartikay Agrawal", "Ayon Borthakur"],
+    "source": "Proceedings of the First Workshop on NeuroAI Multimodal Intelligence @ AAAI 2026, PMLR 308:84-92",
+    "rank": 16,
+    "year": 2026,
+    "citation_url": "https://proceedings.mlr.press/v308/nagabhushana26a.html"
+  },
+  {
+    "title": "A Spiking Heterogeneous Harmonic Resonate-and-Fire State Space Model for Time Series",
+    "authors": ["Kartikay Agrawal", "Vaishnavi Nagabhushana", "Abhijeet Vikram", "Vedant Sharma", "Ayon Borthakur"],
+    "source": "Forty-third International Conference on Machine Learning (ICML 2026)",
+    "rank": 17,
+    "year": 2026,
+    "citation_url": "https://openreview.net/forum?id=dDGxzaRkxO"
   }
 ]

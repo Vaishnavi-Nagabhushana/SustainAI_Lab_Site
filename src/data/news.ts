@@ -2,6 +2,16 @@
 
 export const newsItems = [
   {
+    date: 'May 2026',
+    description:
+      'Our paper titled "A Spiking Heterogeneous Harmonic Resonate-and-Fire State Space Model for Time Series" published at ICML 2026.',
+  },
+  {
+    date: 'Jan 2026',
+    description:
+      'Our paper titled "CATFormer: When Continual Learning Meets Spiking Transformers With Dynamic Thresholds" published at the First Workshop on NeuroAI Multimodal Intelligence @ AAAI 2026.',
+  },
+  {
     date: 'Dec 2025',
     description: 'Our paper titled "A Second-Order SpikingSSM for Wearables" Spotlight presentation at TS4H Workshop, NeurIPS 2025.',
   },
