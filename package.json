@@ -28,7 +28,7 @@
     "MFSDSAI"
   ],
   "engines": {
-    "node": ">=20.0.0"
+    "node": ">=22.12.0"
   },
   "scripts": {
     "prepare": "simple-git-hooks",
