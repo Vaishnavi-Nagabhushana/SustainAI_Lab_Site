@@ -15,7 +15,7 @@ import publicationsData from '../data/Ayon_borthakur.json'
           .map((year) => (
             <div key={year} class="mb-8">
               <h3 class="text-lg font-semibold text-indigo-600 dark:text-indigo-300 mb-4">{year}</h3>
-              <ul class="space-y-4">
+              <ul class="list-none pl-0 space-y-4">
                 {publicationsData
                   .filter((pub) => pub.year === year && pub.type !== 'Patent')
                   .map((publication) => (
