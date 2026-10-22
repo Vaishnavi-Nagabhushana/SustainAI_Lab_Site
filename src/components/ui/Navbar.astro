@@ -1,0 +1,67 @@
+---
+import { Image } from 'astro:assets'
+import {profile} from '../../settings'
+import LabLogo from '@/assets/sustainai-logo.jpg'
+import SocialIcons from './SocialIcons.astro'
+import ThemeSelector from './ThemeSelector.astro'
+import { template } from '@/settings'
+
+const {fullName} = profile
+
+const navLinks = [
+	{ text: 'Home', href: '/' },
+	{ text: 'About', href: '/about' },
+	{ text: 'Publications', href: '/publications' },
+	{ text: 'Team', href: '/team' },
+	{ text: 'Software & Patents', href: '/software' },
+	{ text: 'Teaching', href: '/teaching' },
+	{ text: 'News', href: '/news' },
+]
+---
+<header class='sticky top-0 z-50 bg-base-200 text-base-content shadow-sm'>
+	<nav class='navbar px-4'>
+		<div class='flex flex-1 items-center gap-3'>
+			<div class='dropdown'>
+				<label tabindex='0' class='btn btn-square btn-ghost lg:hidden'>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						fill='none'
+						viewBox='0 0 24 24'
+						stroke-width='1.5'
+						class='size-6 stroke-current'
+					>
+						<path
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'></path>
+					</svg>
+				</label>
+				<ul
+					tabindex='0'
+					class='menu menu-md dropdown-content mt-3 z-[60] p-2 shadow bg-base-200 rounded-box w-56'
+				>
+					{navLinks.map(({ text, href }) => (
+						<li><a href={`${template.base}${href}`}>{text}</a></li>
+					))}
+				</ul>
+			</div>
+			<a href={`${template.base}/`} class='flex items-center gap-3'>
+				<Image
+					class='size-8 rounded-full'
+					src={LabLogo}
+					alt={`Logo of ${fullName}`}
+				/>
+				<span class='text-lg font-black hidden sm:block'>{fullName}</span>
+			</a>
+			<ul class='menu menu-horizontal px-1 hidden lg:flex'>
+				{navLinks.map(({ text, href }) => (
+					<li><a href={`${template.base}${href}`} class='text-base'>{text}</a></li>
+				))}
+			</ul>
+		</div>
+		<div class='flex items-center gap-2 sm:gap-3 ml-8'>
+			<SocialIcons />
+			<ThemeSelector />
+		</div>
+	</nav>
+</header>
