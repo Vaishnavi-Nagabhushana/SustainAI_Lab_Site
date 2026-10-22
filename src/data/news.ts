@@ -2,6 +2,11 @@
 
 export const newsItems = [
   {
+    date: 'Oct 2026',
+    description:
+      'Manash Pratim Pathak joins the lab as a PhD student.',
+  },
+  {
     date: 'May 2026',
     description:
       'Our paper titled "A Spiking Heterogeneous Harmonic Resonate-and-Fire State Space Model for Time Series" published at ICML 2026.',
